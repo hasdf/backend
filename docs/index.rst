@@ -47,17 +47,13 @@ Dependencies
 At least postgres, postgis, mapnik, cairo and redis need to be installed. Do
 this through your os package manager:
 
-Ubuntu
+Ubuntu 20.04
 
 .. sourcecode:: bash
 
-  $ sudo apt install libmapnik3.0 libmapnik-dev redis python3-venv python3-dev libcairo2 libcairo2-dev
+  $ sudo apt install gcc build-essentials postgresql libmapnik3.0 libmapnik-dev redis python3-venv python3-dev libcairo2 libcairo2-dev libboost-python-dev
 
-ArchLinux
 
-.. sourcecode:: bash
-
-  $ pacman -S postgresql postgis redis cairo mapnik
 
 Start DBs
 
@@ -73,9 +69,11 @@ Setup
 .. sourcecode:: bash
 
   $ git clone --recursive https://github.com/aktionskarten/backend
+  $ cd backend
   $ python -m venv env
   $ . env/bin/activate
   $ pip install -r requirements.txt
+  $ export BOOST_PYTHON_LIB=boost_python 
   $ python app/cli/pymapnik.py install # install custom python mapnik package
                                        # can call through flask cli because it
                                        # is essential to instantiate the app
