@@ -76,7 +76,7 @@ Setup
   $ . env/bin/activate
   $ pip install -r requirements.txt
   $ export BOOST_PYTHON_LIB=boost_python 
-  $ ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/libboost_python3.so
+  $ ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/libboost_python.so
   $ python app/cli/pymapnik.py install # install custom python mapnik package
                                        # can call through flask cli because it
                                        # is essential to instantiate the app
