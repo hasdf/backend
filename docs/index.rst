@@ -47,6 +47,8 @@ Dependencies
 At least postgres, postgis, mapnik, cairo and redis need to be installed. Do
 this through your os package manager:
 
+build fails with libmapnik3.1
+
 Ubuntu 20.04
 
 .. sourcecode:: bash
